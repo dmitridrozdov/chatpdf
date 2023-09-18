@@ -29,22 +29,22 @@ export default async function Home() {
             <UserButton afterSignOutUrl="/" />
           </div>
 
-          {/* <div className="flex mt-2">
+          <div className="flex mt-2">
             {isAuth && firstChat && (
-              <Link href={`/chat/${firstChat.id}`}>
+              // <Link href={`/chat/${firstChat.id}`}>
+              // <Link href='/'>
                 <Button>
                   Go to Chats <ArrowRight className="ml-2" />
                 </Button>
-              </Link>
+              // </Link>
             )}
             <div className="ml-3">
-              <SubscriptionButton isPro={isPro} />
+              {/* <SubscriptionButton isPro={isPro} /> */} Subscribe button here
             </div>
-          </div> */}
+          </div>
 
           <p className="max-w-xl mt-1 text-lg text-slate-600">
-            Join millions of students, researchers and professinals to instantly
-            anwer questions and understand research with AI
+            Join a vast community of students, researchers, and professionals to promptly address questions and gain insights into research using AI.
           </p>
 
           {/* <div className="w-full mt-4">
