@@ -9,6 +9,12 @@ import { ArrowRight, LogIn } from "lucide-react";
 // import { chats } from "@/lib/db/schema";
 // import { eq } from "drizzle-orm";
 
+import { cn } from "@/lib/utils";
+import { Montserrat, Kanit } from 'next/font/google';
+
+const montserrat = Montserrat ({ weight: '300', subsets: ['latin'] });
+const kanit = Kanit ({ weight: '700', subsets: ['latin']});
+
 export default async function Home() {
   const { userId } = await auth();
   const isAuth = !!userId;
@@ -25,7 +31,7 @@ export default async function Home() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
-            <h1 className="mr-3 text-5xl font-semibold">Chat with any PDF</h1>
+            <h1 className={cn("mr-3 text-5xl font-semibold", kanit.className)}>Converse with any PDF document</h1>
             <UserButton afterSignOutUrl="/" />
           </div>
 
@@ -43,7 +49,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <p className="max-w-xl mt-1 text-lg text-slate-600">
+          <p className={cn("max-w-xl mt-1 text-lg text-slate-600", montserrat.className)}>
             Join a vast community of students, researchers, and professionals to promptly address questions and gain insights into research using AI.
           </p>
 
