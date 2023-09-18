@@ -38,11 +38,9 @@ export default async function Home() {
           <div className="flex mt-2">
             {isAuth && firstChat && (
               // <Link href={`/chat/${firstChat.id}`}>
-              // <Link href='/'>
                 <Button>
                   Go to Chats <ArrowRight className="ml-2" />
                 </Button>
-              // </Link>
             )}
             <div className="ml-3">
               {/* <SubscriptionButton isPro={isPro} /> */} Subscribe button here
@@ -53,18 +51,19 @@ export default async function Home() {
             Join a vast community of students, researchers, and professionals to promptly address questions and gain insights into research using AI.
           </p>
 
-          {/* <div className="w-full mt-4">
+          <div className="w-full mt-4">
             {isAuth ? (
-              <FileUpload />
+              // <FileUpload />
+              <h1>fileuplod</h1>
             ) : (
               <Link href="/sign-in">
                 <Button>
-                  Login to get Started!
+                  Login
                   <LogIn className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
